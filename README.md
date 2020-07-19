@@ -1,4 +1,4 @@
-# MyAngularCalender
+# MyAngularCalendar
 
 This project developed as a frontend demo with no server connections this can cause restricted functionalities.
 
