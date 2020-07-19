@@ -1,0 +1,33 @@
+.navbar{
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 70px;
+    background-color: lightseagreen;
+    border-color: royalblue;
+    color: white;
+}
+.mat-toolbar{
+    color: lightskyblue;
+}
+.btn-primary{
+    margin-left: auto;
+}
+.btn-danger{
+    margin-left: 1%;
+}
+.btn-secondary{
+    margin-left: auto;
+}
+.componentBody{
+    background-color: white;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+

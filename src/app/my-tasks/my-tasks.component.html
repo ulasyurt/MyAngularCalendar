@@ -1,0 +1,35 @@
+  <mat-toolbar>
+    <span>My Angular Calendar</span>
+    <button (click)="addTaskClicked()" class="btn btn-primary">ADD TASK</button>
+    <button (click)="logOutClicked()" class="btn btn-danger">LOGOUT</button>
+  </mat-toolbar>
+  <div class="componentBody">
+    <mat-table [(dataSource)]="dataSource" class="mat-elevation-z8">
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="title">
+        <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.title}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="deadline">
+        <mat-header-cell *matHeaderCellDef> Deadline </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.deadline  | date:'medium'}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="button">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let element"> 
+          <button (click)="onDetailClick(element)" class="btn btn-secondary">Detail</button>
+          <button (click)="onDeleteClick(element)" class="btn btn-danger">Delete</button>
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>

@@ -1,0 +1,24 @@
+<div class="card" style="width:400px">
+    <div class="card-body">
+      <div class="container-fluid">
+        <form #loginForm="ngForm">
+          <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" value="{{taskTitle}}" name="tasktitle">
+          </div>
+          <div class="form-group">
+            <label>Deadline</label>
+            <input MatInput type="datetime-local" class="form-control" value={{taskDeadline}} name="taskdeadline">
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <textarea  matInput class="form-control" style="height: 200px;" value="{{taskDescription}}" name="taskdescription"></textarea>
+          </div>
+          <div id="btnGroup">
+            <button id="btn1" (click)="cancelClicked()" class="btn btn-danger">CANCEL</button>
+            <button id="btn2" (click)="saveClicked()" class="btn btn-success">SAVE</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
